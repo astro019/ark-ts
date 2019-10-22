@@ -2,8 +2,8 @@
   "name": "ark-ts",
   "version": "0.4.1",
   "description": "An ARK API wrapper, written in TypeScript to interact with ARK blockchain.",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build:docs": "typedoc --options typedoc.json src/index.ts",
     "build:ts": "shx rm -r lib && tsc -p ./ && touch lib/.gitkeep",
