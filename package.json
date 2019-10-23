@@ -6,9 +6,9 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build:docs": "typedoc --options typedoc.json src/index.ts",
-    "build:ts": "shx rm -r lib && tsc -p ./ && touch lib/.gitkeep",
+    "build:ts": "rm -r lib && tsc -p ./ && touch lib/.gitkeep",
     "build:prod": "npm run build:ts && npm run build:docs && npm run copypackage",
-    "copypackage": "shx cp package.json ./lib/package.json",
+    "copypackage": "cp package.json ./lib/package.json",
     "postinstall": "npm run build:prod",
     "test": "mocha --opts .mocharc",
     "lint": "tslint src/**/*.ts"
